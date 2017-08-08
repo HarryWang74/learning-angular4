@@ -13,7 +13,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     RouterModule.forChild([
       { path: 'products', component: ProductListComponent },
       { path: 'product/:id',
-        canActivate: [ ProductGuardService],
+        canActivate: [ ProductGuardService ],
         component: ProductDetailComponent
       }
     ])
