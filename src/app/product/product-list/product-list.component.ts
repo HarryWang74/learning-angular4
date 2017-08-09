@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { IProduct } from '../i-product';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductListComponent implements OnInit {
   listFilter: string;
   showImage: boolean = false;
-  products: any =
+  products: IProduct[] =
     [
       {
         "productId": 1,
