@@ -7,6 +7,7 @@ import { ProductGuardService } from './product-guard.service';
 
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductFilterPipe } from './product-filter.pipe';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
       }
     ])
   ],
-  declarations: [ProductListComponent, ProductDetailComponent],
+  declarations: [ProductListComponent, ProductDetailComponent, ProductFilterPipe],
   providers: [
     ProductGuardService
   ]
