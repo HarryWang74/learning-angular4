@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule} from '@angular/router';
+import { ShareModule } from '../share/share.module';
 
 import { ProductGuardService } from './product-guard.service';
 
@@ -9,6 +10,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 
 @NgModule({
   imports: [
+    ShareModule,
     CommonModule,
     RouterModule.forChild([
       { path: 'products', component: ProductListComponent },
