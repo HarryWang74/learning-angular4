@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import{ HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -12,6 +13,7 @@ import { ProductModule } from './product/product.module';
     WelcomeComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     ProductModule,
     RouterModule.forRoot([

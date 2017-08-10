@@ -9,6 +9,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductListComponent implements OnInit {
   listFilter: string;
+  errorMessage: string;
   showImage: boolean = false;
   products: IProduct[];
   
@@ -17,7 +18,10 @@ export class ProductListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.products = this._productService.getProducts();
+    this._productService.getProducts().subscribe(
+        products =>this.products = products,
+        error => this.errorMessage = <any>error
+    );
   }
 
   toggleImage(): void{
