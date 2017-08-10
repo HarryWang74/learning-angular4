@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -8,7 +8,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailComponent implements OnInit {
   pageTitle: string;
-  constructor(private _route: ActivatedRoute) { }
+  constructor(
+    private _route: ActivatedRoute,
+    private _router: Router
+  ) { }
 
   ngOnInit() {
     // 用 snapshot 静态取 id, id 要和 router config 里设置的名字一致
@@ -17,4 +20,7 @@ export class ProductDetailComponent implements OnInit {
     this.pageTitle =`${id}`;
   }
 
+  onBack(): void{
+    this._router.navigate(['/products']);
+  }
 }
