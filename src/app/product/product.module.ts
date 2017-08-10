@@ -4,6 +4,7 @@ import { RouterModule} from '@angular/router';
 import { ShareModule } from '../share/share.module';
 
 import { ProductGuardService } from './product-guard.service';
+import { ProductService } from './product.service';
 
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
@@ -23,7 +24,7 @@ import { ProductFilterPipe } from './product-filter.pipe';
   ],
   declarations: [ProductListComponent, ProductDetailComponent, ProductFilterPipe],
   providers: [
-    ProductGuardService
+    ProductGuardService, ProductService
   ]
 })
 export class ProductModule { }
